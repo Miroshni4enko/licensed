@@ -25,13 +25,13 @@ See the [migration documentation](./docs/migrating_to_newer_versions.md) for mor
 
 Install `cmake` and `pkg-config` dut to Licensed uses the `libgit2` bindings for Ruby provided by `rugged` which use these dependencies
    
-   >  on Ubuntu 
+   >  Ubuntu 
     
-    `sudo apt-get install cmake pkg-config`
+    sudo apt-get install cmake pkg-config
     
-   >  on OS X 
+   >  OS X 
        
-    `brew install cmake pkg-config`
+    brew install cmake pkg-config
 
 ### With a Gemfile
 

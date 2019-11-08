@@ -149,7 +149,6 @@ module Licensed
     # Find a default configuration file in the given directory.
     # File preference is given by the order of elements in DEFAULT_CONFIG_FILES
     #
-    # Raises Licensed::Configuration::LoadError if a file isn't found
     def self.find_config(directory)
       DEFAULT_CONFIG_FILES.map { |file| directory.join(file) }
                           .find { |file| file.exist? }

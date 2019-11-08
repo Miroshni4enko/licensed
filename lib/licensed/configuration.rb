@@ -148,7 +148,6 @@ module Licensed
 
     # Find a default configuration file in the given directory.
     # File preference is given by the order of elements in DEFAULT_CONFIG_FILES
-    #
     def self.find_config(directory)
       DEFAULT_CONFIG_FILES.map { |file| directory.join(file) }
                           .find { |file| file.exist? }
@@ -159,7 +158,7 @@ module Licensed
     #
     # Raises Licensed::Configuration::LoadError if the file type isn't known
     def self.parse_config(config_path)
-      return {} unless config_path&.file?
+      return {} if config_path.nil? || !config_path.file?
 
       extension = config_path.extname.downcase.delete "."
       config = case extension
